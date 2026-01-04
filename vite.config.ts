@@ -10,5 +10,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/portfolio"  // Default is "/"
+  // base: "/portfolio"  // Default is "/"
 })
