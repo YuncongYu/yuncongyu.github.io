@@ -1,0 +1,36 @@
+import {createTheme} from "@mui/material";
+
+export const palette = {
+  // b0: "#769FCD",
+  // b1: "#B9D7EA",
+  // b2: "#D6E6F2",
+  // b3: "#F7FBFC",
+  // c0: "#71C9CE",
+  // c1: "#A6E3E9",
+  // c2: "#CBF1F5",
+  // c3: "#E3FDFD",
+  b0: "#1B262C",
+  b1: "#0F4C75",
+  b2: "#3282B8",
+  b3: "#BBE1FA",
+  pale_green: "#94A378",
+  pale_yellow: "#E5BA41",
+  pale_red: "#D1855c",
+};
+
+const theme = createTheme({
+  palette: {
+    mode: "dark",
+    primary: {
+      main: palette.b2,
+    },
+    secondary: {
+      main: palette.pale_green,
+    },
+    background: {
+      default: palette.b0,
+    }
+  },
+});
+
+export default theme;
