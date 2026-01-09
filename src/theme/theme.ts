@@ -21,15 +21,15 @@ export const palette = {
 const theme = createTheme({
   palette: {
     mode: "dark",
-    primary: {
-      main: palette.b2,
-    },
-    secondary: {
-      main: palette.pale_green,
-    },
-    background: {
-      default: palette.b0,
-    }
+    // primary: {
+    //   main: palette.b3,
+    // },
+    // secondary: {
+    //   main: palette.pale_green,
+    // },
+    // background: {
+    //   default: palette.b0,
+    // }
   },
 });
 
