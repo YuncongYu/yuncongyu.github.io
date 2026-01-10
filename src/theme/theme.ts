@@ -26,7 +26,7 @@ const theme = createTheme({
   palette: {
     mode: "dark",
     // primary: {
-    //   main: palette.b3,
+    //   main: palette.b2,
     // },
     // secondary: {
     //   main: palette.pale_green,
@@ -36,13 +36,23 @@ const theme = createTheme({
     // }
   },
   typography: {
-    h1: { fontFamily: '"Josefin Sans"' },
-    h5: { fontFamily: '"Lato"'},
+    // h1: { fontFamily: '"Josefin Sans"' },
+    // h5: { fontFamily: '"Lato"' },
     button: {
       fontSize: "18px",
       textTransform: "none",
     },
   },
+  // components: {
+  //   MuiTab: {
+  //     styleOverrides: {
+  //       root: ({ theme }) => ({
+  //         color: theme.palette.primary.main,
+  //         // color: palette.b3,
+  //       }),
+  //     },
+  //   },
+  // },
 });
 
 export const themeSettings = {

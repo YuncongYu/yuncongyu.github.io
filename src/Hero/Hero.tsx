@@ -1,6 +1,6 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { themeSettings } from "../theme/theme.ts";
-import { heroConfig } from "./hero-config.ts";
+import heroConfig from "./hero-config.ts";
 
 // import teaser from "../assets/background/bg.png";
 

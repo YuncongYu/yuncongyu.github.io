@@ -1,9 +1,12 @@
 import { AppBar, Tab, Tabs, Toolbar } from "@mui/material";
 import { useState } from "react";
 import { themeSettings } from "../theme/theme.ts";
+import navigationConfig from "./navigationConfig.ts";
 
-export function Navigation() {
-  const [section, setSection] = useState<string>("Hero");
+function Navigation() {
+  const [section, setSection] = useState<string>(
+    navigationConfig.labels[0].replace(" ", "-").toLowerCase(),
+  );
 
   const handleChange = (_event: React.SyntheticEvent, newSection: string) => {
     setSection(newSection);
@@ -26,13 +29,17 @@ export function Navigation() {
           aria-label="Appbar for navigation"
           sx={{ mt: 0 }}
         >
-          <Tab label="Hero" />
-          <Tab label="About Me" />
-          <Tab label="Portfolio" />
-          <Tab label="Publications" />
-          <Tab label="Contact" />
+          {navigationConfig.labels.map((label) => (
+            <Tab
+              label={label}
+              value={label.replace(" ", "-").toLowerCase()}
+              key={label.toLowerCase()}
+            />
+          ))}
         </Tabs>
       </Toolbar>
     </AppBar>
   );
 }
+
+export default Navigation;
