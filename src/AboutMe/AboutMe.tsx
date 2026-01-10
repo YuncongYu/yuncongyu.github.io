@@ -23,7 +23,7 @@ function AboutMe() {
         <CardMedia
           component="img"
           sx={{ width: 250, height: "100%" }}
-          image="src/assets/photo.jpg"
+          image="src/assets/photo.JPG"
           alt="Yuncong's Photo"
         />
       </Stack>
