@@ -6,6 +6,7 @@ import {
   Typography,
 } from "@mui/material";
 import aboutMeConfig from "./about-me-config.tsx";
+import photo from "../assets/photo.jpg";
 
 function AboutMe() {
   return (
@@ -23,7 +24,7 @@ function AboutMe() {
         <CardMedia
           component="img"
           sx={{ width: 250, height: "100%" }}
-          image="src/assets/photo.jpg"
+          image={photo}
           alt="Yuncong's Photo"
         />
       </Stack>
