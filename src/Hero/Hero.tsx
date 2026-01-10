@@ -1,5 +1,8 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
-import teaser from "../assets/background/bg.png";
+import { themeSettings } from "../theme/theme.ts";
+import { heroConfig } from "./hero-config.ts";
+
+// import teaser from "../assets/background/bg.png";
 
 function Hero() {
   return (
@@ -7,11 +10,12 @@ function Hero() {
       component="section"
       sx={{
         position: "relative",
-        minHeight: { xs: "60vh", md: "70vh" },
+        height: `${themeSettings.appbarHeight}vh`,
+        // minHeight: { xs: "60vh", md: "70vh" },
         display: "flex",
         alignItems: "center",
         // color: "black",
-        backgroundImage: `url(${teaser})`,
+        // backgroundImage: `url(${teaser})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -21,7 +25,8 @@ function Hero() {
         sx={{
           position: "absolute",
           inset: 0,
-          backgroundColor: "rgba(0, 0, 0, 0.15)",
+          // Uncomment when background image provided
+          // backgroundColor: "rgba(0, 0, 0, 0.15)",
         }}
       />
       <Container
@@ -34,12 +39,12 @@ function Hero() {
             variant="h1"
             component="h1"
             color="primary"
-            fontWeight={700}
+            // fontWeight={600}
           >
-            Yuncong Yu
+            {heroConfig.name}
           </Typography>
-          <Typography variant="h4" component="p" color="secondary">
-            Data Scientist with Engineering Background
+          <Typography variant="h5" component="p" color="secondary">
+            {heroConfig.portfolio.join("\u00A0\u00A0|\u00A0\u00A0")}
           </Typography>
         </Stack>
       </Container>

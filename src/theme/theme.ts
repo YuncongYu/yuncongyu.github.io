@@ -1,4 +1,8 @@
-import {createTheme} from "@mui/material";
+import { createTheme } from "@mui/material";
+// import "@fontsource/open-sans/600.css";
+// import "@fontsource-variable/montserrat"; // Defaults to wght axis
+import "@fontsource/josefin-sans/600.css";
+import "@fontsource/lato";
 
 export const palette = {
   // b0: "#769FCD",
@@ -31,6 +35,18 @@ const theme = createTheme({
     //   default: palette.b0,
     // }
   },
+  typography: {
+    h1: { fontFamily: '"Josefin Sans"' },
+    h5: { fontFamily: '"Lato"'},
+    button: {
+      fontSize: "18px",
+      textTransform: "none",
+    },
+  },
 });
+
+export const themeSettings = {
+  appbarHeight: 95,  // [vh]
+}
 
 export default theme;
