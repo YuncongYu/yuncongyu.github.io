@@ -5,14 +5,14 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import aboutMeConfig from "./about-me-config.ts";
+import aboutMeConfig from "./about-me-config.tsx";
 
 function AboutMe() {
   return (
     <Container maxWidth="md" component="section" sx={{ my: 2 }}>
       {/*<Card sx={{ backgroundColor: "transparent", bowShadow: "none" }}>*/}
       <Stack direction="row" spacing={10}>
-        <CardContent sx={{ flex: "1 0 auto" }}>
+        <CardContent>
           <Stack spacing={3}>
             <Typography variant="h4">About Me</Typography>
             <Typography variant="body1" sx={{ width: 500, textAlign: "left" }}>
