@@ -1,5 +1,6 @@
 import { motion, type Variants } from "framer-motion";
 import {
+  Box,
   Card,
   CardActions,
   CardContent,
@@ -11,7 +12,6 @@ import {
 import publicationsConfig from "./publicationsConfig.tsx";
 import { themeSettings } from "../theme/theme.ts";
 import LinkIcon from "@mui/icons-material/Link";
-
 
 // Container controls staggered animation for all cards
 const containerVariants = {
@@ -42,9 +42,12 @@ function Publications() {
       maxWidth={themeSettings.contentWidth}
       sx={{ my: 2 }}
     >
-      <Typography variant="h4" sx={{ mt: 12, mb: 5 }}>
-        Publications
-      </Typography>
+      <Box sx={{ mt: 15, mb: 5 }}>
+        <Typography variant="h4">Publications</Typography>
+        <Typography variant="subtitle1">
+          (Sorted in descending order of the publication year)
+        </Typography>
+      </Box>
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -87,7 +90,14 @@ function Publications() {
                   target="_blank"
                   rel={"noopener noreferrer"}
                 >
-                  <LinkIcon color="primary" />
+                  <LinkIcon
+                    color="primary"
+                    sx={{
+                      "&:hover": {
+                        color: "secondary.main",
+                      },
+                    }}
+                  />
                 </IconButton>
               </CardActions>
             </Card>

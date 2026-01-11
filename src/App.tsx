@@ -4,6 +4,7 @@ import { CssBaseline } from "@mui/material";
 import Navigation from "./Navigation/Navigation.tsx";
 import AboutMe from "./AboutMe/AboutMe.tsx";
 import Publications from "./Publications/Publications.tsx";
+import Contact from "./Contact/Contact.tsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navigation />
       <AboutMe />
       <Publications />
+      <Contact />
     </>
   );
 }

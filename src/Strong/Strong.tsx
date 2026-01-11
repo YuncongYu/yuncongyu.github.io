@@ -13,7 +13,7 @@ function Strong(props: StrongProps) {
         sx={{ fontWeight: "bold", color: "primary.main" }}
       >
         {props.children}
-      </Typography>{" "}
+      </Typography>
     </>
   );
 }

@@ -63,6 +63,9 @@ function Home() {
           // bottom: "-48%",
           // left: "-50%",
           color: "primary.main",
+          "&:hover": {
+            color: "secondary.main",
+          },
           "@keyframes bounce": {
             "0%, 20%, 50%, 80%, 100%": {
               transform: "translateY(0)",

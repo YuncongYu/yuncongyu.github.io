@@ -44,6 +44,7 @@ const theme = createTheme({
   typography: {
     // h1: { fontFamily: '"Josefin Sans"' },
     // h5: { fontFamily: '"Lato"' },
+    body1: { fontSize: 18 },
     button: {
       fontSize: "18px",
       textTransform: "none",

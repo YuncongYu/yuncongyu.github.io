@@ -26,6 +26,12 @@ const publicationsConfig: PublicationConfig = {
       link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5180352",
     },
     {
+      title: "Multivariate Time Series Pattern Search",
+      venue: "Doctoral thesis at Utrecht University",
+      time: "Jan. 2025",
+      link: "https://research-portal.uu.nl/en/publications/multivariate-time-series-pattern-search",
+    },
+    {
       title: "Time Series Representation Techniques: a Survey",
       venue: "Preprint \u00a0|\u00a0 SSRN",
       time: "Oct. 2025",
@@ -56,6 +62,24 @@ const publicationsConfig: PublicationConfig = {
       ),
       time: "Mar. 2023",
       link: "https://www.sciencedirect.com/science/article/pii/S0097849323000316",
+    },
+    {
+      title:
+        "Segmentation of Multivariate Time Series with Convolutional Neural Networks",
+      venue:
+        "International Conference on Calibration Methods and Automotive Data Analytics",
+      content: <>Emerged from my master thesis at AUDI AG and KIT.</>,
+      time: "May 2019",
+      link: "https://www.fast.kit.edu/lff/5773_12639.php",
+    },
+    {
+      title:
+        "Time Series Comparison with Dynamic Time Warping, Convolutional Neural Network and Regression",
+      venue:
+        "International Conference on Calibration Methods and Automotive Data Analytics",
+      content: <>Emerged from my master thesis at AUDI AG and KIT.</>,
+      time: "May 2019",
+      link: "https://www.fast.kit.edu/lff/12227_12640.php",
     },
   ],
 };
