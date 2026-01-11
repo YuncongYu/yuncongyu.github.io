@@ -10,13 +10,13 @@ import photo from "../assets/photo.jpg";
 
 function AboutMe() {
   return (
-    <Container maxWidth="md" component="section" sx={{ my: 2 }}>
+    <Container id="about-me" maxWidth="md" component="section" sx={{ my: 2 }}>
       {/*<Card sx={{ backgroundColor: "transparent", bowShadow: "none" }}>*/}
       <Stack direction="row" spacing={10}>
         <CardContent>
           <Stack spacing={3}>
             <Typography variant="h4">About Me</Typography>
-            <Typography variant="body1" sx={{ width: 500, textAlign: "left" }}>
+            <Typography variant="body1" sx={{ width: 600, textAlign: "left" }}>
               {aboutMeConfig.overview}
             </Typography>
           </Stack>

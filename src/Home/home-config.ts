@@ -1,4 +1,4 @@
-const heroConfig = {
+const homeConfig = {
   name: "Dr. Yuncong Yu",
   portfolio: [
     "Data Science",
@@ -10,4 +10,4 @@ const heroConfig = {
   ],
 };
 
-export default heroConfig;
+export default homeConfig;

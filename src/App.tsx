@@ -1,5 +1,5 @@
 import "./App.css";
-import Hero from "./Hero/Hero.tsx";
+import Home from "./Home/Home.tsx";
 import { CssBaseline } from "@mui/material";
 import Navigation from "./Navigation/Navigation.tsx";
 import AboutMe from "./AboutMe/AboutMe.tsx";
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <CssBaseline />
-      <Hero />
+      <Home />
       <Navigation />
       <AboutMe />
     </>

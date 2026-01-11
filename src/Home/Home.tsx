@@ -1,12 +1,13 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { themeSettings } from "../theme/theme.ts";
-import heroConfig from "./hero-config.ts";
+import homeConfig from "./home-config.ts";
 
 // import teaser from "../assets/background/bg.png";
 
-function Hero() {
+function Home() {
   return (
     <Box
+      id="home"
       component="section"
       sx={{
         position: "relative",
@@ -41,10 +42,10 @@ function Hero() {
             color="primary"
             // fontWeight={600}
           >
-            {heroConfig.name}
+            {homeConfig.name}
           </Typography>
           <Typography variant="h5" component="p" color="secondary">
-            {heroConfig.portfolio.join("\u00A0\u00A0|\u00A0\u00A0")}
+            {homeConfig.portfolio.join("\u00A0\u00A0|\u00A0\u00A0")}
           </Typography>
         </Stack>
       </Container>
@@ -52,4 +53,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default Home;
