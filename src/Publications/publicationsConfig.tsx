@@ -1,4 +1,3 @@
-import SsrnLogo from "../assets/publications/ssrn-logo.svg";
 import type { ReactElement } from "react";
 import Strong from "../Strong/Strong.tsx";
 
@@ -19,7 +18,7 @@ interface PublicationConfig {
 const publicationsConfig: PublicationConfig = {
   publications: [
     {
-      avatar: <SsrnLogo />,
+      // avatar: <SsrnLogo />,
       title:
         "NOOPS: Nonmyopic Feedback-Driven Pattern Search in Multivariate Time Series",
       venue: "Preprint \u00a0|\u00a0 SSRN",
@@ -47,7 +46,7 @@ const publicationsConfig: PublicationConfig = {
     },
     {
       title:
-        "SAXRegEx: Multivariate time series pattern search with symbolic representation, regular expression, and query expansion",
+        "SAXRegEx: Multivariate Time Series Pattern Search With Symbolic Representation, Regular Expression, and Query Expansion",
       venue: "Computers & Graphics",
       content: (
         <Strong>
