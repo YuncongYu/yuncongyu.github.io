@@ -1,6 +1,7 @@
-import { createTheme } from "@mui/material";
+import { type Breakpoint, createTheme } from "@mui/material";
 // import "@fontsource/open-sans/600.css";
 // import "@fontsource-variable/montserrat"; // Defaults to wght axis
+import { blueGrey } from "@mui/material/colors";
 import "@fontsource/josefin-sans/600.css";
 import "@fontsource/lato";
 
@@ -26,7 +27,9 @@ const theme = createTheme({
   palette: {
     mode: "dark",
     // primary: {
-    //   main: palette.b2,
+    //   main: lightBlue[200],
+    //   dark: lightBlue[400],
+    //   contrastText: lightBlue[400],
     // },
     // secondary: {
     //   main: palette.pale_green,
@@ -34,30 +37,39 @@ const theme = createTheme({
     // background: {
     //   default: palette.b0,
     // }
+    text: {
+      primary: blueGrey[100],
+    }
   },
   typography: {
     // h1: { fontFamily: '"Josefin Sans"' },
     // h5: { fontFamily: '"Lato"' },
-    body1: { fontSize: 18},
     button: {
       fontSize: "18px",
       textTransform: "none",
     },
   },
-  // components: {
-  //   MuiTab: {
-  //     styleOverrides: {
-  //       root: ({ theme }) => ({
-  //         color: theme.palette.primary.main,
-  //         // color: palette.b3,
-  //       }),
-  //     },
-  //   },
-  // },
+  components: {
+    MuiTab: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          "&:hover": {
+            color: theme.palette.primary.main,
+          },
+        }),
+      },
+    },
+  },
 });
 
-export const themeSettings = {
-  appbarHeight: 5,  // [vh]
+interface ThemeSettings {
+  appbarHeight: number;
+  contentWidth: Breakpoint;
 }
+
+export const themeSettings: ThemeSettings = {
+  appbarHeight: 5, // [vh]
+  contentWidth: "lg",
+};
 
 export default theme;

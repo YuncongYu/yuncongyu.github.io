@@ -1,9 +1,8 @@
-import { Typography } from "@mui/material";
 import Strong from "../Strong/Strong";
 
 const aboutMeConfig = {
   overview: (
-    <Typography>
+    <>
       I am an experienced
       <Strong>research-oriented data scientist</Strong>
       with a strong
@@ -17,7 +16,7 @@ const aboutMeConfig = {
       <Strong>physics-based and data-driving modeling</Strong>,
       <Strong>data visualization</Strong>, and
       <Strong>rapid tool prototyping</Strong>.
-    </Typography>
+    </>
   ),
 };
 
