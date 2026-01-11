@@ -38,7 +38,7 @@ function Navigation() {
     <AppBar
       position="sticky"
       sx={{
-        height: `${100 - themeSettings.appbarHeight}vh`,
+        height: `${themeSettings.appbarHeight}vh`,
         alignItems: "flex-end",
         justifyContent: "center",
         pr: 2,

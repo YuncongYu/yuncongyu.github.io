@@ -8,6 +8,7 @@ const homeConfig = {
     "Full-Stack WebDev",
     "DevOps",
   ],
+  arrowHeight: 4,  // [vh]
 };
 
 export default homeConfig;

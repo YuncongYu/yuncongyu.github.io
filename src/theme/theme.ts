@@ -57,7 +57,7 @@ const theme = createTheme({
 });
 
 export const themeSettings = {
-  appbarHeight: 95,  // [vh]
+  appbarHeight: 5,  // [vh]
 }
 
 export default theme;
