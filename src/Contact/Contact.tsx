@@ -1,4 +1,4 @@
-import { Box, Card, CardHeader, Paper, Stack, Typography } from "@mui/material";
+import { Box, CardHeader, Paper, Stack, Typography } from "@mui/material";
 import contactConfig from "./contactConfig.tsx";
 
 function Contact() {
@@ -29,7 +29,7 @@ function Contact() {
           justifyContent="center"
         >
           {contactConfig.contactItems.map((item) => (
-            <Card
+            <Box
               key={item.title}
               sx={{ display: "flex", alignItems: "center" }}
             >
@@ -42,7 +42,7 @@ function Contact() {
                 }
                 subheader={item.content}
               />
-            </Card>
+            </Box>
           ))}
         </Stack>
       </Paper>

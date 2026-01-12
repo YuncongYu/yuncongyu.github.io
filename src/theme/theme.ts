@@ -70,7 +70,7 @@ interface ThemeSettings {
 
 export const themeSettings: ThemeSettings = {
   appbarHeight: 5, // [vh]
-  contentWidth: "lg",
+  contentWidth: "md",
 };
 
 export default theme;
