@@ -13,31 +13,43 @@ function AboutMe() {
   return (
     <Container
       id="about-me"
-      maxWidth={themeSettings.contentWidth}
       component="section"
-      sx={{ my: 2 }}
+      maxWidth={themeSettings.contentWidth}
+      sx={{ my: { xs: 4, md: 8 } }}
     >
       {/*<Card sx={{ backgroundColor: "transparent", bowShadow: "none" }}>*/}
       <Stack
-        direction="row"
-        spacing={10}
+        direction={{ xs: "column", md: "row" }}
+        spacing={{ xs: 4, md: 8 }}
         alignItems="center"
         justifyContent="center"
       >
-        <CardContent>
+        <CardMedia
+          component="img"
+          image={photo}
+          alt="Yuncong's Photo"
+          sx={{
+            width: { xs: 180, sm: 200, md: 250 },
+            height: "auto",
+            borderRadius: 2,
+            objectFit: "cover",
+          }}
+        />
+        <CardContent sx={{ p: 0 }}>
           <Stack spacing={3}>
             <Typography variant="h4">About Me</Typography>
-            <Typography variant="body1" sx={{ width: 600, textAlign: "left" }}>
+            <Typography
+              variant="body1"
+              sx={{
+                maxWidth: 600,
+                textAlign: "left",
+                mx: { xs: "auto", md: "left" },
+              }}
+            >
               {aboutMeConfig.overview}
             </Typography>
           </Stack>
         </CardContent>
-        <CardMedia
-          component="img"
-          sx={{ width: 250, height: "100%" }}
-          image={photo}
-          alt="Yuncong's Photo"
-        />
       </Stack>
       {/*</Card>*/}
     </Container>
