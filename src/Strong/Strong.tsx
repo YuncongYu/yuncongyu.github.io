@@ -10,7 +10,7 @@ function Strong(props: StrongProps) {
       {" "}
       <Typography
         component="span"
-        sx={{ fontWeight: "bold", color: "primary.main" }}
+        sx={{ fontWeight: "bold" }}
       >
         {props.children}
       </Typography>
