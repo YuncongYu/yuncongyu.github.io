@@ -4,29 +4,28 @@ import contactConfig from "./contactConfig.tsx";
 function Contact() {
   return (
     <Box
-      component="section"
       id="contact"
+      component="section"
       sx={{
-        mt: 10,
+        mt: { xs: 6, md: 10 },
         width: "100%",
-        height: 200,
       }}
     >
       <Paper
         elevation={1}
         sx={{
           width: "100%",
-          height: "100%",
+          py: { xs: 4, md: 6 },
           display: "flex",
-          alignItems: "center",
           justifyContent: "center",
         }}
       >
         <Stack
-          direction="row"
-          spacing={10}
-          alignItems="center"
+          direction={{ xs: "column", md: "row" }}
+          spacing={{ xs: 1, md: 8 }}
+          // alignItems="center"
           justifyContent="center"
+          px={2}
         >
           {contactConfig.contactItems.map((item) => (
             <Box
@@ -36,11 +35,12 @@ function Contact() {
               {item.icon}
               <CardHeader
                 title={
-                  <Typography variant="h5" textAlign="left">
+                  <Typography variant="h6" textAlign="left">
                     {item.title}
                   </Typography>
                 }
                 subheader={item.content}
+                sx={{ textAlign: "left" }}
               />
             </Box>
           ))}
