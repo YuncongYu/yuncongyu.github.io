@@ -40,7 +40,7 @@ function Publications() {
       component="section"
       id="publications"
       maxWidth={themeSettings.contentWidth}
-      sx={{ my: 2 }}
+      sx={{ my: 2, scrollMarginTop: themeSettings.appbarHeight * 20 }}
     >
       <Box sx={{ mt: 15, mb: 5 }}>
         <Typography variant="h4">Publications</Typography>

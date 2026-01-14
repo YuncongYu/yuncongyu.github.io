@@ -15,7 +15,7 @@ function AboutMe() {
       id="about-me"
       component="section"
       maxWidth={themeSettings.contentWidth}
-      sx={{ my: { xs: 4, md: 8 } }}
+      sx={{ my: { xs: 4, md: 8 }, scrollMarginTop: themeSettings.appbarHeight * 20 }}
     >
       {/*<Card sx={{ backgroundColor: "transparent", bowShadow: "none" }}>*/}
       <Stack
