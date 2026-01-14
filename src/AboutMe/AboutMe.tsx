@@ -2,6 +2,7 @@ import {
   CardContent,
   CardMedia,
   Container,
+  Link,
   Stack,
   Typography,
 } from "@mui/material";
@@ -47,6 +48,14 @@ function AboutMe() {
               }}
             >
               {aboutMeConfig.overview}
+              {" "}
+              <Link
+                href="/cv_yuncong_yu.pdf"
+                target="_blank"
+                rel="noopener noreferer"
+              >
+               View my CV
+              </Link>
             </Typography>
           </Stack>
         </CardContent>

@@ -2,7 +2,7 @@ import type { ReactElement } from "react";
 import MapIcon from "@mui/icons-material/Map";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
-import { Typography } from "@mui/material";
+import { Link } from "@mui/material";
 
 interface ContactItem {
   icon: ReactElement;
@@ -25,19 +25,7 @@ const contactConfig: ContactConfig = {
       icon: <EmailIcon fontSize="large" />,
       title: "Email",
       content: (
-        <Typography
-          component="a"
-          href="mailto:yuncong.yu@outlook.com"
-          sx={{
-            color: "primary.main",
-            "&:hover": {
-              color: "secondary.main",
-              textDecoration: "underline",
-            },
-          }}
-        >
-          yuncong.yu@outlook.com
-        </Typography>
+        <Link href="mailto:yuncong.yu@outlook.com">yuncong.yu@outlook.com</Link>
       ),
     },
     {

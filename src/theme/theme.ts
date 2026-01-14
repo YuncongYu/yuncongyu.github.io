@@ -39,7 +39,7 @@ const theme = createTheme({
     // }
     text: {
       primary: blueGrey[100],
-    }
+    },
   },
   typography: {
     // h1: { fontFamily: '"Josefin Sans"' },
@@ -51,6 +51,24 @@ const theme = createTheme({
     },
   },
   components: {
+    MuiButtonBase: {
+      styleOverrides: {
+        root: ({theme}) => ({
+          "&:hover": {
+            color: theme.palette.secondary.main,
+          }
+        })
+      }
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          "&:hover": {
+            color: theme.palette.secondary.main,
+          },
+        }),
+      },
+    },
     MuiTab: {
       styleOverrides: {
         root: ({ theme }) => ({
