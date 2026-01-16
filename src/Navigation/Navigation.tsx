@@ -83,7 +83,7 @@ function Navigation() {
           <>
             <IconButton
               edge="end"
-              color="inherit"
+              color="primary"
               aria-label="menu"
               onClick={(e) => setAnchorEl(e.currentTarget)}
             >
