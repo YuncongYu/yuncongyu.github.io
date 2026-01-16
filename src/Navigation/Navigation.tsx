@@ -69,22 +69,25 @@ function Navigation() {
   }, []);
 
   return (
-    <AppBar
-      component="nav"
-      position="sticky"
-      sx={{
-        height: `${themeSettings.appbarHeight}vh`,
-        // alignItems: "flex-end",
-        justifyContent: "center",
-        px: 3,
-      }}
-    >
-      <Toolbar disableGutters sx={{ alignItems: "center" }}>
+    <AppBar component="nav" position="sticky" sx={{}}>
+      <Toolbar
+        disableGutters
+        sx={{
+          minHeight: `${themeSettings.appbarHeight}vh`,
+          px: 3,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <Box
           component="a"
           href="#top"
           sx={{
-            width: 32,
+            width: { xs: 24, md: 28 },
+            height: { xs: 24, md: 28 },
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
             color: "primary.main",
             "&:hover": { color: "primary.main" },
           }}
