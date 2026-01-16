@@ -1,11 +1,13 @@
 import { type Breakpoint, createTheme } from "@mui/material";
 // import "@fontsource/open-sans/600.css";
-// import "@fontsource-variable/montserrat"; // Defaults to wght axis
+// import "@fontsource-variable/montserrat"; // Defaults to weight axis
 import { blueGrey } from "@mui/material/colors";
 import "@fontsource/josefin-sans/600.css";
 import "@fontsource/lato";
 
 export const palette = {
+  // MUI colors
+  blueGrey100: blueGrey[100],
   // From Color Hunt
   b0: "#1B262C",
   b1: "#0F4C75",

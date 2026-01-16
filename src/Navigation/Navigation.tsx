@@ -12,7 +12,7 @@ import {
 import { useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
-import { themeSettings } from "../theme/theme.ts";
+import { palette, themeSettings } from "../theme/theme.ts";
 import navigationConfig from "./navigationConfig.ts";
 import YuncongsLogo from "../assets/icons/yuncong-logo.svg?react";
 
@@ -72,7 +72,7 @@ function Navigation() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            color: "primary.main",
+            color: palette.blueGrey100,
             "&:hover": { color: "primary.main" },
           }}
         >
@@ -83,9 +83,9 @@ function Navigation() {
           <>
             <IconButton
               edge="end"
-              color="primary"
               aria-label="menu"
               onClick={(e) => setAnchorEl(e.currentTarget)}
+              sx={{ "&:hover": { color: "primary.main" } }}
             >
               <MenuIcon />
             </IconButton>
