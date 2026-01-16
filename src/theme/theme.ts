@@ -57,6 +57,20 @@ const theme = createTheme({
     },
   },
   components: {
+    MuiMenuItem: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          ".MuiMenu-root &": {
+            "&:hover": {
+              color: theme.palette.primary.main,
+            },
+            "&:active": {
+              color: theme.palette.primary.main,
+            },
+          },
+        }),
+      },
+    },
     MuiButtonBase: {
       styleOverrides: {
         root: ({ theme }) => ({

@@ -1,11 +1,9 @@
 import {
   AppBar,
   Box,
-  Drawer,
   IconButton,
-  List,
-  ListItemButton,
-  ListItemText,
+  Menu,
+  MenuItem,
   Tab,
   Tabs,
   Toolbar,
@@ -23,30 +21,16 @@ const labelToHref = (label: string) => label.replace(" ", "-").toLowerCase();
 function Navigation() {
   const theme = useTheme();
 
-  const [openMenu, setOpenMenu] = useState<boolean>(false);
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [section, setSection] = useState<string>(
     labelToHref(navigationConfig.labels[0]),
   );
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const openMenu = Boolean(anchorEl);
 
   const handleChange = (_event: React.SyntheticEvent, newSection: string) => {
     setSection(newSection);
   };
-
-  const drawer = (
-    <List>
-      {navigationConfig.labels.map((label) => (
-        <ListItemButton
-          component="a"
-          href={`#${labelToHref(label)}`}
-          onClick={() => setOpenMenu(false)}
-          key={label}
-        >
-          <ListItemText primary={label} />
-        </ListItemButton>
-      ))}
-    </List>
-  );
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -101,17 +85,28 @@ function Navigation() {
               edge="end"
               color="inherit"
               aria-label="menu"
-              onClick={() => setOpenMenu(true)}
+              onClick={(e) => setAnchorEl(e.currentTarget)}
             >
               <MenuIcon />
             </IconButton>
-            <Drawer
-              anchor="right"
+            <Menu
+              anchorEl={anchorEl}
               open={openMenu}
-              onClose={() => setOpenMenu(false)}
+              onClose={() => setAnchorEl(null)}
+              anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+              transformOrigin={{ vertical: "top", horizontal: "right" }}
             >
-              {drawer}
-            </Drawer>
+              {navigationConfig.labels.map((label) => (
+                <MenuItem
+                  key={label}
+                  component="a"
+                  href={`#${labelToHref(label)}`}
+                  onClick={() => setAnchorEl(null)}
+                >
+                  {label}
+                </MenuItem>
+              ))}
+            </Menu>
           </>
         ) : (
           <Tabs value={section} onChange={handleChange}>
