@@ -6,37 +6,43 @@ import "@fontsource/josefin-sans/600.css";
 import "@fontsource/lato";
 
 export const palette = {
-  // b0: "#769FCD",
-  // b1: "#B9D7EA",
-  // b2: "#D6E6F2",
-  // b3: "#F7FBFC",
-  // c0: "#71C9CE",
-  // c1: "#A6E3E9",
-  // c2: "#CBF1F5",
-  // c3: "#E3FDFD",
+  // From Color Hunt
   b0: "#1B262C",
   b1: "#0F4C75",
   b2: "#3282B8",
   b3: "#BBE1FA",
+  // From Color Hunt
   pale_green: "#94A378",
   pale_yellow: "#E5BA41",
   pale_red: "#D1855c",
+  // From Coolor: Refreshing Summer Fun
+  skyBlue: "#8ECAE6",
+  blueGreen: "#219EBC",
+  deepSpaceBlue: "#023047",
+  amberFlame: "#FFB703",
+  tigerOrange: "#FB8500",
+  // From Coolor: Pastel Dreamland Adventure: overly pale
+  pinkOrchid: "#CDB4DB",
+  pastelPetal: "#FFC8DD",
+  blushPop: "#FFAFCC",
+  icyBlue: "#BDE0FE",
+  skyBluePDA: "#A2D2FF",
 };
 
 const theme = createTheme({
   palette: {
     mode: "dark",
     // primary: {
-    //   main: lightBlue[200],
+    //   main: palette.skyBlue,
     //   dark: lightBlue[400],
     //   contrastText: lightBlue[400],
     // },
     // secondary: {
-    //   main: palette.pale_green,
+    //   main: palette.pinkOrchid,
     // },
-    // background: {
-    //   default: palette.b0,
-    // }
+    background: {
+      // default: palette.deep_space_blue,
+    },
     text: {
       primary: blueGrey[100],
     },
@@ -53,12 +59,12 @@ const theme = createTheme({
   components: {
     MuiButtonBase: {
       styleOverrides: {
-        root: ({theme}) => ({
+        root: ({ theme }) => ({
           "&:hover": {
             color: theme.palette.secondary.main,
-          }
-        })
-      }
+          },
+        }),
+      },
     },
     MuiLink: {
       styleOverrides: {

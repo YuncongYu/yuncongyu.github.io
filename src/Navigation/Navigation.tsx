@@ -79,7 +79,7 @@ function Navigation() {
         px: 3,
       }}
     >
-      <Toolbar disableGutters>
+      <Toolbar disableGutters sx={{ alignItems: "center" }}>
         <Box
           component="a"
           href="#top"
