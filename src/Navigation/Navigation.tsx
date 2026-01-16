@@ -1,5 +1,6 @@
 import {
   AppBar,
+  Box,
   Drawer,
   IconButton,
   List,
@@ -15,6 +16,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
 import { themeSettings } from "../theme/theme.ts";
 import navigationConfig from "./navigationConfig.ts";
+import YuncongsLogo from "../assets/icons/yuncong-logo.svg?react";
 
 const labelToHref = (label: string) => label.replace(" ", "-").toLowerCase();
 
@@ -72,12 +74,24 @@ function Navigation() {
       position="sticky"
       sx={{
         height: `${themeSettings.appbarHeight}vh`,
-        alignItems: "flex-end",
+        // alignItems: "flex-end",
         justifyContent: "center",
-        pr: 2,
+        px: 3,
       }}
     >
       <Toolbar disableGutters>
+        <Box
+          component="a"
+          href="#top"
+          sx={{
+            width: 32,
+            color: "primary.main",
+            "&:hover": { color: "primary.main" },
+          }}
+        >
+          <YuncongsLogo width="100%" height="100%" />
+        </Box>
+        <Box sx={{ flexGrow: 1 }} />
         {isMobile ? (
           <>
             <IconButton
@@ -97,10 +111,7 @@ function Navigation() {
             </Drawer>
           </>
         ) : (
-          <Tabs
-            value={section}
-            onChange={handleChange}
-          >
+          <Tabs value={section} onChange={handleChange}>
             {navigationConfig.labels.map((label) => (
               <Tab
                 component="a"
