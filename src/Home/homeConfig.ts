@@ -4,10 +4,11 @@ const homeConfig = {
     "AI Architect",
     "Data Scientist",
     // "Statistics",
-    // "Algorithm Designer",
+    "Algorithm Designer",
     // "Visual Analytics",
     "Full-Stack Web-Developer",
     // "DevOps",
+    "Mechatronics Development Engineer"
   ],
   arrowHeight: 4,  // [vh]
 };
