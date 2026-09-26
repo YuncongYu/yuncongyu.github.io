@@ -1,12 +1,13 @@
 const homeConfig = {
   name: "Dr. Yuncong Yu",
   portfolio: [
-    "Data Science",
-    "Statistics",
-    "Algorithm Design",
-    "Visual Analytics",
-    "Full-Stack WebDev",
-    "DevOps",
+    "AI Architect",
+    "Data Scientist",
+    // "Statistics",
+    "Algorithm Designer",
+    // "Visual Analytics",
+    "Full-Stack Web-Developer",
+    // "DevOps",
   ],
   arrowHeight: 4,  // [vh]
 };
