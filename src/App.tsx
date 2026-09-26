@@ -3,6 +3,7 @@ import Home from "./Home/Home.tsx";
 import { CssBaseline } from "@mui/material";
 import Navigation from "./Navigation/Navigation.tsx";
 import AboutMe from "./AboutMe/AboutMe.tsx";
+import Portfolio from "./Portfolio/Portfolio.tsx";
 import Publications from "./Publications/Publications.tsx";
 import Contact from "./Contact/Contact.tsx";
 
@@ -13,6 +14,7 @@ function App() {
       <Home />
       <Navigation />
       <AboutMe />
+      <Portfolio />
       <Publications />
       <Contact />
     </>

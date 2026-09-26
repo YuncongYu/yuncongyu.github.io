@@ -1,7 +1,7 @@
 import { Box, Container, IconButton, Stack, Typography } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { themeSettings } from "../theme/theme.ts";
-import homeConfig from "./home-config.ts";
+import homeConfig from "./homeConfig.ts";
 
 // import teaser from "../assets/background/bg.png";
 

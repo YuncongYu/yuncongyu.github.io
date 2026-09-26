@@ -6,7 +6,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import aboutMeConfig from "./about-me-config.tsx";
+import aboutMeConfig from "./aboutMeConfig.tsx";
 import photo from "../assets/photo.jpg";
 import { themeSettings } from "../theme/theme.ts";
 

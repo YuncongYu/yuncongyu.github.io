@@ -18,7 +18,7 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.15, // delay between each card
+      staggerChildren: 0.1, // delay between each card
     },
   },
 };
@@ -30,7 +30,7 @@ const cardVariants: Variants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { duration: 0.30, ease: "easeOut" },
   },
 };
 
