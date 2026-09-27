@@ -1,5 +1,5 @@
 const navigationConfig = {
-  labels: ["Home", "About Me", "Portfolio", "Experience", "Publications", "Contact"],
+  labels: ["Home", "About Me", "Portfolio", "Experience", "Education", "Publications", "Contact"],
 };
 
 export default navigationConfig;
