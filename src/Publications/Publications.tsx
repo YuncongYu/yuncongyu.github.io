@@ -1,36 +1,22 @@
 import { motion, type Variants } from "framer-motion";
-import {
-  Box,
-  Card,
-  CardActions,
-  CardContent,
-  Container,
-  IconButton,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Container, IconButton, Stack, Typography } from "@mui/material";
 import publicationsConfig from "./publicationsConfig.tsx";
 import { themeSettings } from "../theme/theme.ts";
-import LinkIcon from "@mui/icons-material/Link";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
-// Container controls staggered animation for all cards
 const containerVariants = {
   hidden: {},
   visible: {
-    transition: {
-      staggerChildren: 0.1, // delay between each card
-    },
+    transition: { delayChildren: 0.06, staggerChildren: 0.08 },
   },
 };
 
-// Card animation: slide up, fade in, scale slightly
 const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 20, scale: 0.95 },
+  hidden: { opacity: 0, x: -10 },
   visible: {
     opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { duration: 0.30, ease: "easeOut" },
+    x: 0,
+    transition: { duration: 0.35, ease: "easeOut" },
   },
 };
 
@@ -44,64 +30,80 @@ function Publications() {
     >
       <Box sx={{ mt: 15, mb: 5 }}>
         <Typography variant="h4">Publications</Typography>
-        <Typography variant="subtitle1">
-          (Sorted in descending order of the publication year)
-        </Typography>
       </Box>
       <motion.div
         variants={containerVariants}
         initial="hidden"
-        whileInView="visible" // Animate when the section scrolls into view
-        viewport={{ once: true, amount: 0.2 }} // triggers when 20% visible
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.12 }}
+        style={{ borderTop: "1px solid rgba(255, 255, 255, 0.16)" }}
       >
         {publicationsConfig.publications.map((pub) => (
-          <motion.div key={pub.title} variants={cardVariants}>
-            <Card
+          <Box
+            component={motion.article}
+            key={pub.title}
+            variants={cardVariants}
+            sx={{
+              display: "grid",
+              gridTemplateColumns: { xs: "minmax(0, 1fr) 44px", sm: "104px minmax(0, 1fr) 48px" },
+              columnGap: { xs: 1, sm: 3 },
+              rowGap: { xs: 1, sm: 0 },
+              alignItems: "center",
+              py: { xs: 2.5, sm: 3 },
+              borderBottom: "1px solid",
+              borderColor: "divider",
+              transition: "background-color 0.2s ease",
+              "&:hover": { bgcolor: "action.hover" },
+            }}
+          >
+            <Typography
+              variant="subtitle2"
+              // color="primary.main"
               sx={{
-                my: 2,
-                display: "flex",
-                position: "relative",
-                textAlign: "left",
-                pl: 2,
-                "&::before": {
-                  content: '""',
-                  position: "absolute",
-                  top: 0,
-                  bottom: 0,
-                  left: 0,
-                  width: 6,
-                  backgroundColor: "primary.main",
-                },
+                gridColumn: { xs: "1 / -1", sm: "1" },
+                gridRow: { xs: "1", sm: "1" },
+                pl: { xs: 0, sm: 1 },
+                whiteSpace: "nowrap",
               }}
-              key={pub.title}
             >
-              <CardContent>
-                <Stack spacing={0.5}>
-                  <Typography variant="h6">{pub.title}</Typography>
-                  <Typography variant="subtitle1">{pub.venue}</Typography>
-                  {pub.content && <Typography variant="subtitle1">{pub.content}</Typography>}
-                  <Typography variant="body2">{pub.time}</Typography>
-                </Stack>
-              </CardContent>
-              <CardActions sx={{ marginLeft: "auto" }}>
-                <IconButton
-                  component="a"
-                  href={pub.link}
-                  target="_blank"
-                  rel={"noopener noreferrer"}
-                >
-                  <LinkIcon
-                    color="primary"
-                    sx={{
-                      "&:hover": {
-                        color: "secondary.main",
-                      },
-                    }}
-                  />
-                </IconButton>
-              </CardActions>
-            </Card>
-          </motion.div>
+              {pub.time}
+            </Typography>
+            <Stack
+              spacing={0.75}
+              sx={{
+                gridColumn: { xs: "1", sm: "2" },
+                gridRow: { xs: "2", sm: "1" },
+                textAlign: "left",
+                minWidth: 0,
+              }}
+            >
+              <Typography variant="h5" sx={{ lineHeight: 1.25 }}>
+                {pub.title}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {pub.venue}
+              </Typography>
+              {pub.content && (
+                <Typography component="div" variant="body2" color="primary">
+                  {pub.content}
+                </Typography>
+              )}
+            </Stack>
+            <IconButton
+              component="a"
+              href={pub.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Open publication: ${pub.title}`}
+              sx={{
+                gridColumn: { xs: "2", sm: "3" },
+                gridRow: { xs: "2", sm: "1" },
+                justifySelf: "end",
+              }}
+            >
+              <OpenInNewIcon color="primary" />
+            </IconButton>
+          </Box>
         ))}
       </motion.div>
     </Container>
