@@ -4,6 +4,7 @@ import { CssBaseline } from "@mui/material";
 import Navigation from "./Navigation/Navigation.tsx";
 import AboutMe from "./AboutMe/AboutMe.tsx";
 import Portfolio from "./Portfolio/Portfolio.tsx";
+import Experience from "./Experience/Experience.tsx";
 import Publications from "./Publications/Publications.tsx";
 import Contact from "./Contact/Contact.tsx";
 
@@ -15,6 +16,7 @@ function App() {
       <Navigation />
       <AboutMe />
       <Portfolio />
+      <Experience />
       <Publications />
       <Contact />
     </>
