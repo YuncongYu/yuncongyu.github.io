@@ -43,7 +43,7 @@ const publicationsConfig: PublicationConfig = {
       venue: "Computers & Graphics",
       content: (
         <Strong>
-          Best paper in EuroVis 2022
+          Best paper in EuroVA 2022
           {/*Best Paper in the 13th International EuroVis Workshop on Visual Analytics (EuroVA 2022)*/}
         </Strong>
       ),
