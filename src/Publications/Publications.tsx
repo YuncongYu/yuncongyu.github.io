@@ -77,10 +77,10 @@ function Publications() {
             >
               <CardContent>
                 <Stack spacing={0.5}>
-                  <Typography variant="h5">{pub.title}</Typography>
+                  <Typography variant="h6">{pub.title}</Typography>
                   <Typography variant="subtitle1">{pub.venue}</Typography>
-                  {pub.content && <Typography>{pub.content}</Typography>}
-                  <Typography variant="subtitle2">{pub.time}</Typography>
+                  {pub.content && <Typography variant="subtitle1">{pub.content}</Typography>}
+                  <Typography variant="body2">{pub.time}</Typography>
                 </Stack>
               </CardContent>
               <CardActions sx={{ marginLeft: "auto" }}>
