@@ -5,21 +5,21 @@ import utrechtUniversityLogo from "../../assets/university-logos/utrecht-univers
 const educationConfig = {
   items: [
     {
-      period: "Dec 2020 - Jan 2025",
+      period: "Dec. 2020 - Jan. 2025",
       degree: "Ph.D. in Computer Science",
       institution: "Utrecht University",
       location: "Utrecht, the Netherlands",
       logo: utrechtUniversityLogo,
     },
     {
-      period: "Sep 2015 - Dec 2018",
+      period: "Sep. 2015 - Dec. 2018",
       degree: "M.Sc. in Mechanical Engineering",
       institution: "Karlsruhe Institute of Technology (KIT)",
       location: "Karlsruhe, Germany",
       logo: kitLogo,
     },
     {
-      period: "Sep 2011 - Jun 2015",
+      period: "Sep. 2011 - Jun. 2015",
       degree: "B.Eng. in Mechanical Engineering",
       institution: "Sichuan University",
       location: "Chengdu, China",
