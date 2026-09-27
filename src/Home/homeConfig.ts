@@ -8,7 +8,7 @@ const homeConfig = {
     // "Visual Analytics",
     "Full-Stack Web-Developer",
     // "DevOps",
-    "Mechatronics Development Engineer"
+    "Mechatronics Engineer"
   ],
   arrowHeight: 4,  // [vh]
 };
