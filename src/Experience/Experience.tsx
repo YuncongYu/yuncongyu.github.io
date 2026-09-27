@@ -65,7 +65,7 @@ function Experience() {
               position: "absolute",
               top: { xs: 28, sm: 6 },
               bottom: 5,
-              left: { xs: 8, sm: 169 },
+              left: { xs: 8, sm: 174 },
               width: 2,
               bgcolor: "primary.main",
               transformOrigin: "top center",
@@ -78,7 +78,7 @@ function Experience() {
               variants={itemVariants}
               sx={{
                 display: "grid",
-                gridTemplateColumns: { xs: "18px minmax(0, 1fr)", sm: "140px 28px minmax(0, 1fr)" },
+                gridTemplateColumns: { xs: "18px minmax(0, 1fr)", sm: "145px 28px minmax(0, 1fr)" },
                 columnGap: { xs: 1.5, sm: 2 },
                 rowGap: { xs: 0.5, sm: 0 },
                 textAlign: "left",
