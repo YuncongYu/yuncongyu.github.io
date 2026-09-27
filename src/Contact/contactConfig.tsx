@@ -19,13 +19,13 @@ const contactConfig: ContactConfig = {
     {
       icon: <MapIcon fontSize="large" />,
       title: "Address",
-      content: "Rockwellstr. 12, 38518 Gifhorn, Germany",
+      content: "Junkersring 10, 76344 Eggenstein-Leopoldshafen, Germany",
     },
     {
       icon: <EmailIcon fontSize="large" />,
       title: "Email",
       content: (
-        <Link href="mailto:yuncong.yu@outlook.com">yuncong.yu@outlook.com</Link>
+        <Link href="mailto:yuncong.yu@gmx.de">yuncong.yu@gmx.de</Link>
       ),
     },
     {
