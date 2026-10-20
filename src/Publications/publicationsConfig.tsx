@@ -20,10 +20,10 @@ const publicationsConfig: PublicationConfig = {
     {
       // avatar: <SsrnLogo />,
       title:
-        "NOOPS: Nonmyopic Feedback-Driven Pattern Search in Multivariate Time Series",
-      venue: "Preprint \u00a0|\u00a0 SSRN",
-      time: "Feb. 2026",
-      link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5180352",
+        "NOOPS: Nonmyopic Time Series Pattern Search",
+      venue: "19th International Conference on Similarity Search and Applications (SISAP 2026)",
+      time: "Oct. 2026",
+      link: "https://link.springer.com/chapter/10.1007/978-3-032-42224-8_21",
     },
     {
       title: "Time Series Representation Techniques: a Survey",
